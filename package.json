@@ -2,12 +2,12 @@
   "name": "user-management-app",
   "version": "1.0.0",
   "description": "User Management Dashboard with CRUD, Notifications, and Analytics",
-  "main": "server.js",
+  "main": "backend/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "migrate": "mysql -u root -pAbhay@123 < sql/schema.sql",
-    "seed": "mysql -u root -p < sql/schema.sql"
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "migrate": "mysql -u root -p < backend/sql/schema.sql",
+    "seed": "mysql -u root -p < backend/sql/schema.sql"
   },
   "engines": {
     "node": "20.x"

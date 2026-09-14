@@ -31,30 +31,18 @@ A full-stack User Management Dashboard built with **HTML, CSS, JavaScript, Node.
 
 ```
 user-management-app/
-├── config/
-│   └── db.js               # MySQL connection pool
-├── controllers/
-│   ├── userController.js
-│   ├── notificationController.js
-│   └── analyticsController.js
-├── models/
-│   └── userModel.js        # SQL query functions
-├── routes/
-│   ├── userRoutes.js
-│   ├── notificationRoutes.js
-│   └── analyticsRoutes.js
-├── public/
+├── backend/
+│   ├── config/db.js        # MySQL connection pool
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── sql/schema.sql      # Database schema + seed data
+│   └── server.js           # Express entry point
+├── frontend/
 │   ├── index.html          # SPA frontend
 │   ├── css/style.css
 │   └── js/
-│       ├── app.js
-│       ├── users.js
-│       ├── notifications.js
-│       └── analytics.js
-├── sql/
-│   └── schema.sql          # Database schema + seed data
 ├── .env.example            # Environment variable template
-├── server.js               # Express entry point
 └── package.json
 ```
 
@@ -89,7 +77,7 @@ DB_PASSWORD=your_mysql_password
 
 ### 4. Set up the database
 ```bash
-mysql -u root -p < sql/schema.sql
+mysql -u root -p < backend/sql/schema.sql
 ```
 
 ### 5. Start the server
